@@ -11,7 +11,7 @@ export function useCountries() {
         const resp = await fetchCountries();
         setCountries(resp);
       } catch (e) {
-        setError('There was an error');
+        setError(e.message);
       }
     };
     fetchData();
